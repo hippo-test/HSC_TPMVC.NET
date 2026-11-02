@@ -1,0 +1,75 @@
+﻿body {
+    background-color: powderblue;
+}
+h1 {
+    margin-right: 170px;
+    margin-left: 170px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+Nav {
+    width: 150px;
+    border: 2px solid #8c014c;
+    background-color: #8c014c;
+    color: white;
+    float : left;
+}
+section {
+    margin-left: 170px;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: chocolate;
+}
+.table-formulaire caption {
+    caption-side: top;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 10px;
+}
+/* Cadre extérieur du tableau */
+.table-formulaire {
+    width: 100%;
+    max-width: 700px;
+    /*margin: 20px auto;*/
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+    /* Cadre de chaque cellule */
+    .table-formulaire th,
+    .table-formulaire td {
+        border: 1px solid black;
+        padding: 15px;
+        /*vertical-align: middle;*/
+    }
+
+        /* Largeur de la colonne des noms */
+        .table-formulaire td:first-child {
+            width: 35%;
+        }
+
+    /* Champs de saisie */
+    .table-formulaire input,
+    .table-formulaire select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+.bloc{
+    width: 100%;
+    max-width: 700px;
+}

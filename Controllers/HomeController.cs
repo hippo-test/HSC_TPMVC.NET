@@ -7,6 +7,7 @@ using TPLOCAL1.Models;
 //Careful, the MVC model is a so-called convention model instead of configuration,
 //The controller must imperatively be name with "Controller" at the end !!!
 namespace TPLOCAL1.Controllers
+
 {
     public class HomeController : Controller
     {
@@ -37,12 +38,28 @@ namespace TPLOCAL1.Controllers
 
         //methode to send datas from form to validation page
         [HttpPost]
-        public ActionResult ValidationFormulaire(/*model*/)
+        public ActionResult ValidationFormulaire(Infos infos)
         {
+            if (infos.adresse?.Length < 5)
+            {
+                ModelState.AddModelError("adresse", "L'adresse email doit contenir au moins 5 caractères.");
+            }
+            if (ModelState.IsValid)
+            {
+                //TODO : code reading of the xml files provide
+                //truc.add(infos);
+                return View("ValidationFormulaire", infos);
+            }
+            else
+            {
+                //TODO : stay on the form page with error messages
+                ModelState.AddModelError("", "Veuillez saisir des informations valides.");
+                return View("Form", infos);
+            }
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
-            return null;
+            //return null;
 
         }
     }

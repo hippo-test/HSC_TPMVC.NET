@@ -1,0 +1,138 @@
+﻿
+@model TPLOCAL1.Models.Infos
+@{
+}
+<title>Remplir le formulaire</title>
+<head>
+    <link rel="stylesheet" href="~/resources/Index.css" />
+</head>
+<header>    
+    <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+    <h1>Page de validation</h1>
+</header>
+<body>
+    <div class="row">
+    <div class="col-md-8">
+                <div class="bloc">
+                <caption>Votre formulaire a bien été pris en compte</caption>
+            <table class="table-formulaire">
+                    <nav>
+                        <ul>
+                            <li><a href="/Home/Index" tags>acceuil</a></li>
+                            <li><a href="#">Liste avis</a></li>
+                        </ul>
+                    </nav>
+                    <caption>Informations personnelles</caption>
+                    <tbody>
+                        <tr>
+                            <td>
+                                prenom
+                            </td>
+                            <td>
+                            @Html.DisplayFor(model => model.prenom)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                nom
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.nom)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                genre
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.genre)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                adresse
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.adresse)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                zipcode
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.zipcode)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ville
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.ville)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                email
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.email)
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    <caption>Informations formation suivie</caption>
+                    <div class="bloc">
+                    <table class="table-formulaire">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    date de debut
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.startDate)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    type de formation
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.typetraining)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                <caption>Avis sur la formation</caption>
+                <div class="bloc">
+                    <table class="table-formulaire">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    avis formation Cobol
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.aviscb)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    avis formation csharp
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.aviscs)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+    </div>
+    </div>
+</body>
+
+
+
+    
