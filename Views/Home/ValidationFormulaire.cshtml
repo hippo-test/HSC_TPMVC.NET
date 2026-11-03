@@ -15,13 +15,13 @@
     <div class="col-md-8">
                 <div class="bloc">
                 <caption>Votre formulaire a bien été pris en compte</caption>
-            <table class="table-formulaire">
-                    <nav>
-                        <ul>
-                            <li><a href="/Home/Index" tags>acceuil</a></li>
-                            <li><a href="#">Liste avis</a></li>
-                        </ul>
-                    </nav>
+                <nav>
+                    <ul>
+                        <li><a href="/Home/Index" tags>Acceuil</a></li>
+                        <li><a href="/Home/Index/OpinionList">Liste avis</a></li>
+                    </ul>
+                </nav>
+            <table class="table-formulaire">    
                     <caption>Informations personnelles</caption>
                     <tbody>
                         <tr>
@@ -58,7 +58,7 @@
                         </tr>
                         <tr>
                             <td>
-                                zipcode
+                                Code postal
                             </td>
                             <td>
                                 @Html.DisplayFor(model => model.zipcode)
@@ -82,9 +82,9 @@
                         </tr>
                         </tbody>
                         </table>
-                    <caption>Informations formation suivie</caption>
                     <div class="bloc">
                     <table class="table-formulaire">
+                        <caption>Informations formation suivie</caption>
                         <tbody>
                             <tr>
                                 <td>
@@ -105,9 +105,9 @@
                         </tbody>
                     </table>
                     </div>
-                <caption>Avis sur la formation</caption>
                 <div class="bloc">
                     <table class="table-formulaire">
+                        <caption>Avis sur la formation</caption>
                         <tbody>
                             <tr>
                                 <td>

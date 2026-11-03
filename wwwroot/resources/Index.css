@@ -1,7 +1,4 @@
-﻿body {
-    background-color: powderblue;
-}
-h1 {
+﻿h1 {
     margin-right: 170px;
     margin-left: 170px;
     text-align: center;
@@ -36,39 +33,28 @@ a {
 .table-formulaire caption {
     caption-side: top;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-    padding-bottom: 10px;
 }
-/* Cadre extérieur du tableau */
 .table-formulaire {
     width: 100%;
     max-width: 700px;
-    /*margin: 20px auto;*/
     border: 2px solid black;
     border-collapse: collapse;
 }
-
-    /* Cadre de chaque cellule */
-    .table-formulaire th,
     .table-formulaire td {
         border: 1px solid black;
         padding: 15px;
-        /*vertical-align: middle;*/
     }
-
-        /* Largeur de la colonne des noms */
-        .table-formulaire td:first-child {
-            width: 35%;
-        }
-
-    /* Champs de saisie */
-    .table-formulaire input,
     .table-formulaire select {
         width: 100%;
         box-sizing: border-box;
     }
+.table-formulaire .O {
+    background-color: lightgreen;
+}
+    
+.table-formulaire .N {
+    background-color: red;
+}
 .bloc{
     width: 100%;
     max-width: 700px;

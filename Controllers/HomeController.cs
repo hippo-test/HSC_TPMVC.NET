@@ -24,7 +24,10 @@ namespace TPLOCAL1.Controllers
                 {
                     case "OpinionList":
                         //TODO : code reading of the xml files provide
-                        return View(id);
+                        List<Opinion> opinionList = new List<Opinion>();
+                        OpinionList lecture = new OpinionList();
+                        opinionList = lecture.GetAvis("F:\\TPLOCAL1-base\\XlmFile\\DataAvis.xml");
+                        return View(id,opinionList);
                     case "Form":
                         //TODO : call the Form view with data model empty
                         return View(id);
@@ -42,12 +45,11 @@ namespace TPLOCAL1.Controllers
         {
             if (infos.adresse?.Length < 5)
             {
-                ModelState.AddModelError("adresse", "L'adresse email doit contenir au moins 5 caractères.");
+                ModelState.AddModelError("adresse", "L'adresse doit contenir au moins 5 caractères.");
             }
             if (ModelState.IsValid)
             {
                 //TODO : code reading of the xml files provide
-                //truc.add(infos);
                 return View("ValidationFormulaire", infos);
             }
             else

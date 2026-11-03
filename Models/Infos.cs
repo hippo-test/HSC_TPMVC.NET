@@ -16,7 +16,7 @@ namespace TPLOCAL1.Models
         public string email { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        [Range(typeof(DateTime),"01-01-0001","01-01-2021",
+        [Range(typeof(DateTime),"01-01-0001","31-12-2020",
         ErrorMessage = "La date doit être avant le 1er janvier 2021.")]
         public DateTime startDate { get; set; }
         [RegularExpression(@"^(Cobol Training|Object Training|Dual Skills Training)$", 

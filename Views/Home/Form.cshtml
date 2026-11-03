@@ -13,12 +13,14 @@
 <div class="row">
     <div class="col-md-8">
         <form asp-action="ValidationFormulaire" method="post">
+        <div asp-validation-summary="ModelOnly"class="text-danger">
+        </div>
                 <div class="bloc">
             <table class="table-formulaire">
                         <nav>
                             <ul>
-                                <li><a href="/Home/Index" tags>acceuil</a></li>
-                                <li><a href="#">Liste avis</a></li>
+                                <li><a href="/Home/Index" tags>Acceuil</a></li>
+                                <li><a href="/Home/Index/OpinionList">Liste avis</a></li>
                             </ul>
                         </nav>
                 <caption>Informations personnelles</caption>
@@ -106,9 +108,9 @@
                     </tr>
                 </tbody>
             </table>
-                    <caption>Informations formation suivie</caption>
                     <div class="bloc">
                     <table class="table-formulaire">
+                            <caption>Informations formation suivie</caption>
                     <tr>
                         <td>
                             <label asp-for="startDate">Date début formation</label>
@@ -129,13 +131,14 @@
                                 <option value="Object Training">Object Training</option>
                                 <option value="Dual Skills Training">Dual Skills Training</option>
                             </select>
+                            <span asp-validation-for="typetraining" class="text-danger"></span>
                 </td>
                     </tr>
                         </table>
 					</div>
-                    <caption>Avis sur la formation</caption>
                     <div class="bloc">
                         <table class="table-formulaire">
+                            <caption> Avis sur la formation suivie</caption>
                             <tr>
                                 <td>
                                     <label asp-for="aviscb">Formation Cobol</label>
