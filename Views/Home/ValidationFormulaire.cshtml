@@ -1,26 +1,21 @@
 ﻿
 @model TPLOCAL1.Models.Infos
 @{
+    ViewData["Title"] = "Page de validation";
 }
 <title>Remplir le formulaire</title>
 <head>
-    <link rel="stylesheet" href="~/resources/Index.css" />
+    <link rel="stylesheet" href="~/resources/Index.css" asp-append-version="true" />
 </head>
-<header>    
-    <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
-    <h1>Page de validation</h1>
-</header>
 <body>
-    <div class="row">
-    <div class="col-md-8">
-                <div class="bloc">
-                <caption>Votre formulaire a bien été pris en compte</caption>
-                <nav>
-                    <ul>
-                        <li><a href="/Home/Index" tags>Acceuil</a></li>
-                        <li><a href="/Home/Index/OpinionList">Liste avis</a></li>
-                    </ul>
-                </nav>
+            <caption>Votre formulaire a bien été pris en compte</caption>
+            <nav>
+                <ul>
+                    <li><a href="/Home/Index" tags>Acceuil</a></li>
+                    <li><a href="/Home/Index/OpinionList">Liste avis</a></li>
+                </ul>
+            </nav>
+            <div class="formulaire">
             <table class="table-formulaire">    
                     <caption>Informations personnelles</caption>
                     <tbody>
@@ -82,7 +77,6 @@
                         </tr>
                         </tbody>
                         </table>
-                    <div class="bloc">
                     <table class="table-formulaire">
                         <caption>Informations formation suivie</caption>
                         <tbody>
@@ -104,8 +98,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    </div>
-                <div class="bloc">
                     <table class="table-formulaire">
                         <caption>Avis sur la formation</caption>
                         <tbody>
@@ -127,10 +119,7 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                </div>
-    </div>
-    </div>
+            </div>
 </body>
 
 

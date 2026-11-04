@@ -1,4 +1,5 @@
-﻿h1 {
+﻿
+h1 {
     margin-right: 170px;
     margin-left: 170px;
     text-align: center;
@@ -30,19 +31,26 @@ li {
 a {
     color: chocolate;
 }
-.table-formulaire caption {
-    caption-side: top;
-    text-align: center;
+.formulaire {
+    margin-left: 120px;
+    max-width: 400px;
 }
-.table-formulaire {
-    width: 100%;
-    max-width: 700px;
-    border: 2px solid black;
-    border-collapse: collapse;
-}
-    .table-formulaire td {
+
+    .formulaire .table-formulaire {
+        width: 80%;
+        margin-bottom: 8px;
         border: 1px solid black;
-        padding: 15px;
+    }
+
+    .table-formulaire th,
+    .table-formulaire td {
+        border: 1px solid gray;
+        padding: 2px 5px;
+    }
+
+    .table-formulaire caption {
+        caption-side: top;
+        text-align: center;
     }
     .table-formulaire select {
         width: 100%;
@@ -54,8 +62,4 @@ a {
     
 .table-formulaire .N {
     background-color: red;
-}
-.bloc{
-    width: 100%;
-    max-width: 700px;
 }

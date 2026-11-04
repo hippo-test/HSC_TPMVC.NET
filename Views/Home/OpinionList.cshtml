@@ -1,26 +1,19 @@
 ﻿@model IEnumerable<TPLOCAL1.Models.Opinion>
 @{
+    ViewData["Title"] = "Liste des avis";
 }
 <title>Liste des avis</title>
 <head>
-    <link rel="stylesheet" href="~/resources/Index.css" />
+    <link rel="stylesheet" href="~/resources/Index.css" asp-append-version="true" />
 </head>
-<header>    
-    <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
-</header>
 <body>
-    <div class="row">
-    <div class="col-md-8">
-                <div class="bloc">
-                <nav>
-                    <ul>
-                        <li><a href="/Home/Index" tags>Acceuil</a></li>
-                        <li><a href="/Home/Index/Form">Formulaire</a></li>
-                    </ul>
-                </nav>
-                </div>
-    </div>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="/Home/Index" tags>Acceuil</a></li>
+            <li><a href="/Home/Index/Form">Formulaire</a></li>
+        </ul>
+    </nav>
+    <div class="formulaire">
     <table class="table-formulaire">
         <caption>Liste</caption>
         <thead>
@@ -36,20 +29,21 @@
                 if (item.OpinionGiven == "O")
                 {
                     <tr>
-                        <td>@item.LastName</td>
                         <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
                         <td class="O">Oui</td>
                     </tr>
 				}
 				else
 				{
 				<tr>
+                    <td>@item.FirstName</td>
 					<td>@item.LastName</td>
-					<td>@item.FirstName</td>
 					<td class="N">Non</td>
 				</tr>
 				}
             }
         </tbody>
     </table>
+    </div>
 </body>
