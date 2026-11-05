@@ -12,7 +12,7 @@ namespace TPLOCAL1.Models
         [RegularExpression(@"^[0-9]{5}$", ErrorMessage = "L'adresse postal doit être 5 chiffres.")]
         public string zipcode { get; set; }
         public string ville { get; set; }
-        [DataType(DataType.EmailAddress, ErrorMessage= "Entrez une adresse valide.")]
+        [DataType(DataType.EmailAddress, ErrorMessage= "Entrez une adresse e-mail valide.")]
         public string email { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]

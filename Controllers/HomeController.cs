@@ -26,7 +26,8 @@ namespace TPLOCAL1.Controllers
                         //TODO : code reading of the xml files provide
                         List<Opinion> opinionList = new List<Opinion>();
                         OpinionList lecture = new OpinionList();
-                        opinionList = lecture.GetAvis("F:\\TPLOCAL1-base\\XlmFile\\DataAvis.xml");
+                        string cheminComplet = Path.Combine(Directory.GetCurrentDirectory(), "XlmFile", "DataAvis.xml");
+                        opinionList = lecture.GetAvis(cheminComplet);
                         return View(id,opinionList);
                     case "Form":
                         //TODO : call the Form view with data model empty
